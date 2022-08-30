@@ -19,14 +19,16 @@ const generateReaderMode = async(url: string): Promise<IsArticle> => {
   const articleObject = new Readability(doc).parse()
   const article = articleObject || emptyArticleObject
   const titleElement = <HTMLTitleElement>document.querySelector(`[data-id="article-title"]`)
-  const bodyElement = <HTMLDivElement>document.querySelector(`[data-id="article-body"]`)
+  const bodyElement = <HTMLParagraphElement>document.querySelector(`[data-id="article-body"]`)
   const authorElement = <HTMLDivElement>document.querySelector(`[data-id="article-author"]`)
+  const excerptElement = <HTMLParagraphElement>document.querySelector(`[data-id="article-excerpt]`)
+
+  console.log(article)
 
   titleElement.innerText = article.title
-  authorElement.innerHTML = `
-  <h5>By <span data-id="article-author">${article.byline}</span> from <span data-id="article-src">${article.siteName}</span></h5>
-  `
+  authorElement.innerHTML = `<p class="uk-article-meta">Written by <a href="#">${article.byline}</a> on 12 April 2012. Posted in <a href="#">${article.siteName}</a></p>`
   bodyElement.innerHTML = article.content
+  excerptElement.innerText = article.excerpt
 
   return article
 }

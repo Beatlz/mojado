@@ -4,24 +4,39 @@
     <meta charset="utf-8"/>
     <title>My First Parcel App</title>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.5/dist/css/uikit.min.css" />
     <script type="module" src="./app.ts"></script>
   </head>
-  <body class="dark:bg-slate-800">
-    <header>
+  <body class="uk-light uk-background-secondary">
+    <header class="uk-container">
       <h1>Article URL</h1>
-      <input type="text" data-id="article-url" />
-      <button data-id="goto-article">
+      <input
+        class="uk-input"
+        type="text"
+        data-id="article-url"
+      />
+      <button
+        data-id="goto-article"
+        class="uk-button uk-button-primary uk-margin-small-top"
+      >
         Jump the wall!
       </button>
       <p id="response-message" />
     </header>
 
-    <div class="content">
-      <section id="article">
-        <h1 data-id="article-title"></h1>
+    <div class="uk-container uk-margin-medium-top">
+      <article class="uk-article">
+        <h1 
+          class="uk-article-title"
+          data-id="article-title"
+        ></h1>
         <div data-id="article-author"></div>
-        <div data-id="article-body" />
-      </section>
+        <p
+          data-id="article-excerpt"
+          class="uk-text-lead"
+        ></p>
+        <p data-id="article-body"></p>
+      </article>
     </div>
   </body>
 </html>

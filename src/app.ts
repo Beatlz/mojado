@@ -4,7 +4,7 @@ import generateReaderMode from "./modules/article/generateReaderMode";
 const goToArticle = (): void => {
   const articleInputElement = <HTMLInputElement>document.querySelector(`[data-id="article-url"]`)
   const articleURL = articleInputElement.value;
-  const cachedURL = `http://webcache.googleusercontent.com/search?q=cache:${articleURL}&num=1`;
+  const cachedURL = `https://webcache.googleusercontent.com/search?q=cache:${articleURL}&num=1`;
   const isURL = validateString(articleURL, `url`);
 
   if (!isURL) {
