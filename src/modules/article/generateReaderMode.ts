@@ -23,8 +23,6 @@ const generateReaderMode = async(url: string): Promise<IsArticle> => {
   const authorElement = <HTMLDivElement>document.querySelector(`[data-id="article-author"]`)
   const excerptElement = <HTMLParagraphElement>document.querySelector(`[data-id="article-excerpt]`)
 
-  console.log(article)
-
   titleElement.innerText = article.title
   authorElement.innerHTML = `<p class="uk-article-meta">Written by <a href="#">${article.byline}</a> on 12 April 2012. Posted in <a href="#">${article.siteName}</a></p>`
   bodyElement.innerHTML = article.content
