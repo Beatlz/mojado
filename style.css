@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* :root {
+:root {
   --header-height: 120px;
   --background-dark: #0A0A0A;
 }
@@ -37,4 +33,4 @@ a:visited {
   margin-top: var(--header-height);
   padding-top: 25px;
   padding-bottom: 25px;
-} */
+} 
