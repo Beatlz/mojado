@@ -20,13 +20,13 @@ const generateReaderMode = async(url: string): Promise<IsArticle> => {
   const article = articleObject || emptyArticleObject
   const titleElement = <HTMLTitleElement>document.querySelector(`[data-id="article-title"]`)
   const bodyElement = <HTMLDivElement>document.querySelector(`[data-id="article-body"]`)
-  const authorElement = <HTMLSpanElement>document.querySelector(`[data-id="article-author"]`)
-  const srcElement = <HTMLSpanElement>document.querySelector(`[data-id="article-src"]`)
+  const authorElement = <HTMLDivElement>document.querySelector(`[data-id="article-author"]`)
 
   titleElement.innerText = article.title
+  authorElement.innerHTML = `
+  <h5>By <span data-id="article-author">${article.byline}</span> from <span data-id="article-src">${article.siteName}</span></h5>
+  `
   bodyElement.innerHTML = article.content
-  authorElement.innerText = article.byline
-  srcElement.innerText = article.siteName
 
   return article
 }

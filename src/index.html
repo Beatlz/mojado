@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../style.css" />
     <script type="module" src="./app.ts"></script>
   </head>
-  <body>
+  <body class="dark:bg-slate-800">
     <header>
       <h1>Article URL</h1>
       <input type="text" data-id="article-url" />
@@ -19,7 +19,7 @@
     <div class="content">
       <section id="article">
         <h1 data-id="article-title"></h1>
-        <h5>By <span data-id="article-author"></span> from <span data-id="article-src"></span></h5>
+        <div data-id="article-author"></div>
         <div data-id="article-body" />
       </section>
     </div>
