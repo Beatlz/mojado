@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --header-height: 120px;
+  --background-dark: #0A0A0A;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--background-dark);
+  color: #FFFFFF;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  height: var(--header-height);
+  top: 0;
+  left: 0;
+  background: var(--background-dark);
+  z-index: 2;
+}
+
+a {
+  color: #6495ED;
+}
+
+a:visited {
+  color: #9370DB;
+}
+
+.content {
+  position: relative;
+  margin-top: var(--header-height);
+  padding-top: 25px;
+  padding-bottom: 25px;
+} */

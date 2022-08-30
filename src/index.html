@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="./app.ts"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Article URL</h1>
+      <input type="text" data-id="article-url" />
+      <button data-id="goto-article">
+        Jump the wall!
+      </button>
+      <p id="response-message" />
+    </header>
+
+    <div class="content">
+      <section id="article">
+        <h1 data-id="article-title"></h1>
+        <h5>By <span data-id="article-author"></span> from <span data-id="article-src"></span></h5>
+        <div data-id="article-body" />
+      </section>
+    </div>
+  </body>
+</html>
